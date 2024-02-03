@@ -8,7 +8,7 @@ const signupBody = zod.object({
 });
 
 const updationBody = zod.object({
-    updationPassword: zod.string().min(6).optional(),
+    updationPassword: zod.string().min(8).optional(),
     updationFirstName: zod.string().optional(),
     updationLastName: zod.string().optional(),
 });

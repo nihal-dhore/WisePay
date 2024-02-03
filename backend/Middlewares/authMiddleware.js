@@ -12,7 +12,6 @@ async function authMiddleware(req, res, next) {
             msg: "Unauthorized Request",
         });
     }
-    const data = "3"
     const token = authHeader.split(" ")[1];
 
     try {

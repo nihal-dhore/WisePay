@@ -6,6 +6,7 @@ import { Send } from "./pages/Send";
 import "@fontsource/open-sans"; // Defaults to weight 400
 import "@fontsource/open-sans/400.css"; // Specify weight
 import { LandingPage } from "./pages/LandingPage";
+import { Index } from "./pages/Index";
 function App() {
   
 document.body.style.background = "#b8b7b4";
@@ -19,6 +20,7 @@ document.body.style.fontFamily = "Open Sans";
           <Route path="/signin" element={<Signin />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/send" element={<Send />} />
+          <Route path="/check" element={<Index />} />
         </Routes>
       </BrowserRouter>
 

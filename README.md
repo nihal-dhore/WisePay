@@ -1,7 +1,3 @@
-Certainly! Here's a template for your project setup README:
-
----
-
 # Wise Pay
 
 ## Overview

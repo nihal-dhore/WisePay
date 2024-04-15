@@ -1,0 +1,23 @@
+{
+  "name": "bank-webhook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "yarn esbuild ./src/index.ts --bundle --platform=node --outfile=dist/index.js",
+    "start": "nodemon dist/index.js",
+    "dev": "yarn build && yarn start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/mime": "^4.0.0",
+    "@wise/db": "*",
+    "esbuild": "^0.20.2",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2"
+  }
+}

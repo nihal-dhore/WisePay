@@ -1,4 +1,3 @@
-import { PtoPTransactions } from "../components/PtoPTransactions";
 import { SidebarItem } from "../components/SidebarItem";
 
 export default function Layout({

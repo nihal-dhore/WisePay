@@ -10,8 +10,8 @@ export const PtoPTransferCard = () => {
   const [phone, setPhone] = useState("");
   const [amount, setAmount] = useState(0);
 
-  console.log(amount);
-  
+  //console.log(amount);
+
   return (
     <div className="w-full">
       <Card title="P2P Transfer">
@@ -27,9 +27,7 @@ export const PtoPTransferCard = () => {
             placeholder="Amount"
           />
           <div className="flex justify-center mt-5">
-            <Button
-              onClick={async () => await ptoPTransfer(phone, amount)}
-            >
+            <Button onClick={async () => await ptoPTransfer(phone, amount)}>
               Pay Now --{">"}{" "}
             </Button>
           </div>

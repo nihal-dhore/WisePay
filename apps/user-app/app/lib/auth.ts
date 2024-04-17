@@ -18,12 +18,12 @@ export const authOptions = {
           return null;
         }
 
-       /*  const validation = credentialsSchema.safeParse(credentials);
-
-        if (!validation.success) {
-          console.log(validation.error);
-          return null;
-        } */
+        /*  const validation = credentialsSchema.safeParse(credentials);
+ 
+         if (!validation.success) {
+           console.log(validation.error);
+           return null;
+         } */
 
         const hashedPassword = await bcrypt.hash(credentials.password, 10);
         //console.log(hashedPassword);
@@ -43,7 +43,7 @@ export const authOptions = {
 
           if (passwordValidation) {
             return {
-              id: existingUser.id.toString(),
+              id: existingUser.id,
               name: existingUser.name,
               number: existingUser.number
             }
@@ -77,6 +77,9 @@ export const authOptions = {
   secret: process.env.NEXTAUTH_SECRET || "secret",
   callbacks: {
     async session({ token, session }: any) {
+      //console.log(session);
+      //console.log(token);
+
       session.user.id = token.sub
 
       return session;
